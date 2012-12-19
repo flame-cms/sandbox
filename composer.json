@@ -1,0 +1,36 @@
+{
+	"name": "flame/cms",
+	"description": "Simple and smart CMS based on framework Flame",
+	"keywords": ["cms", "nette", "simple", "flame", "jsifalda", "sandbox", "tools"],
+	"homepage": "https://github.com/flame-org/CMS",
+	"license": "BSD-2-Clause-FreeBSD",
+
+	"authors": [
+		{
+			"name": "Jiří Šifalda",
+			"homepage": "http://jsifalda.name/"
+		}
+	],
+
+	"support":{
+		"email":"flame@jsifalda.name",
+		"issues":"https://github.com/flame-org/CMS/issues"
+	},
+
+	"config": {
+		"vendor-dir": "libs"
+	},
+
+	"require": {
+		"kdyby/bootstrap-form-renderer": "dev-master",
+		"doctrine/orm": "2.3.0",
+		"flame/framework": "dev-master",
+		"flame/navbarbuilder-component": "dev-master",
+		"flame/fileuploader-component": "dev-master",
+		"nette/nette": "dev-master",
+		"symfony/console": "2.0.*",
+		"flame/bootstrapdatepicker-control": "dev-master",
+		"flame/multiplefileupload-control": "@dev",
+		"flame/lightboxgallery-component": "@dev"
+	}
+}
