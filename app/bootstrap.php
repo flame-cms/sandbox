@@ -17,7 +17,10 @@ require __DIR__ . '/../libs/autoload.php';
 $configurator = new Configurator();
 $configurator->enableDebugger(__DIR__ . '/../log');
 $configurator->setTempDirectory(__DIR__ . '/../temp');
-$configurator->createRobotLoader()->addDirectory(__DIR__)->register();
+$configurator->createRobotLoader()
+	->addDirectory(__DIR__)
+	->addDirectory(__DIR__ . '/../libs/flame/cms')
+	->register();
 $configurator->addConfig(__DIR__ . '/config/config.neon', $configurator::AUTO);
 $configurator->addParameters(array(
 	'appDir' => __DIR__,
