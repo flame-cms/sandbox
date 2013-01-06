@@ -1,2 +1,5 @@
 composer.lock
 www/media/*
+www/adminer
+www/bootstrap
+www/tiny_mce
