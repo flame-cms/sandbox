@@ -19,6 +19,8 @@ $configurator->createRobotLoader()
 	->addDirectory(__DIR__ . '/../libs/flame/cms')
 	->register();
 $configurator->addConfig(__DIR__ . '/config/config.neon');
+$configurator->addConfig(__DIR__ . '/config/config.dev.neon');
+$configurator->addConfig(__DIR__ . '/config/config.prod.neon');
 $configurator->addParameters(array(
 	'appDir' => __DIR__,
 	'wwwDir' => realpath(__DIR__ . '/../www'),

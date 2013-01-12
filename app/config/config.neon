@@ -4,42 +4,32 @@
 # If you don't protect this directory from direct web access, anybody will be able to see your passwords.
 # http://nette.org/security-warning
 #
-common:
-  php:
-    date.timezone: Europe/Prague
-    zlib.output_compression: yes
 
-  nette:
-    container:
-      debugger: false
+php:
+  date.timezone: Europe/Prague
+  zlib.output_compression: yes
 
-    template:
-      helperLoaders: \Flame\Templating\Helpers
-      helpers:
-        thumb: @ThumbnailsCreator::thumb
+nette:
+  container:
+    debugger: false
 
-    application:
-      mapping:
-        *: Flame\CMS\*Module\*Presenter
-      debugger: false
+  template:
+    helperLoaders: \Flame\Templating\Helpers
+    helpers:
+      thumb: @ThumbnailsCreator::thumb
 
-    session:
-      autoStart: true
-      expiration: 14 days
-      name: FLAME
+  application:
+    mapping:
+      *: Flame\CMS\*Module\*Presenter
+    debugger: false
 
-  includes:
-    - parameters.neon
-    - services.neon
-    - factories.neon
+  session:
+    autoStart: true
+    expiration: 14 days
+    name: FLAME
 
 
-development < common:
-  parameters:
-    database:
-      host: localhost
-      dbname: cms
-      user: root
-      password: root
-
-production < common:
+includes:
+  - services.neon
+  - parameters.neon
+  - factories.neon
