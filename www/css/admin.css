@@ -9,6 +9,7 @@
 }
 input, textarea {
     width: auto;
+    min-width: 220px;
 }
 .tags-multiSelect{
     max-height: 200px;
