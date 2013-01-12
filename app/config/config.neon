@@ -43,5 +43,3 @@ development < common:
       password: root
 
 production < common:
-  includes:
-    - production.php
