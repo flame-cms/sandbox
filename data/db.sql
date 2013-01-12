@@ -73,7 +73,7 @@ CREATE TABLE `flame_link` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `flame_link` (`id`, `name`, `url`, `description`, `public`, `hit`) VALUES
-(4,	'Github/flame-org/CMS',	'https://github.com/flame-cms/CMS',	'Public sources of Flame framework',	1,	4),
+(4,	'Github/flame-cms/CMS',	'https://github.com/flame-cms/CMS',	'Public sources of Flame framework',	1,	4),
 (5,	'Github.com/flame-org',	'https://github.com/flame-org',	'Profile of organization which is working Flame framework',	1,	2),
 (6,	'JSifalda.name',	'http://jsifalda.name/',	'Online author\'s profile',	1,	4);
 
