@@ -8,20 +8,17 @@
  * @date    14.07.12
  */
 
-use Flame\Config\Configurator,
-	Nette\Application\Routers\Route,
-	Nette\Application\Routers\RouteList;
-
 require __DIR__ . '/../libs/autoload.php';
 
-$configurator = new Configurator();
+$configurator = new \Flame\Config\Configurator();
+// $configurator->setDebugMode(TRUE);
 $configurator->enableDebugger(__DIR__ . '/../log');
 $configurator->setTempDirectory(__DIR__ . '/../temp');
 $configurator->createRobotLoader()
 	->addDirectory(__DIR__)
 	->addDirectory(__DIR__ . '/../libs/flame/cms')
 	->register();
-$configurator->addConfig(__DIR__ . '/config/config.neon', $configurator::AUTO);
+$configurator->addConfig(__DIR__ . '/config/config.neon');
 $configurator->addParameters(array(
 	'appDir' => __DIR__,
 	'wwwDir' => realpath(__DIR__ . '/../www'),
