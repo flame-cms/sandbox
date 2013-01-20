@@ -3,6 +3,10 @@
 		"vendor-dir": "libs"
 	},
 
+	"require-dev": {
+		"dg/ftp-deployment": "@dev"
+	},
+
 	"require": {
 		"flame/cms": "@dev",
 		"kdyby/bootstrap-form-renderer": "dev-master",
@@ -13,7 +17,6 @@
 		"nette/nette": "dev-master",
 		"symfony/console": "2.0.*",
 		"flame/bootstrapdatepicker-control": "dev-master",
-		"flame/lightboxgallery-component": "@dev",
-		"dg/ftp-deployment": "@dev"
+		"flame/lightboxgallery-component": "@dev"
 	}
 }
