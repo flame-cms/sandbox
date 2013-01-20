@@ -17,7 +17,6 @@ $configurator->setTempDirectory(__DIR__ . '/../temp');
 $configurator->createRobotLoader()
 	->addDirectory(__DIR__)
 	->addDirectory(__DIR__ . '/../libs/flame/cms')
-	->addDirectory(__DIR__ . '/../libs/kdyby/')
 	->register();
 $configurator->addConfig(__DIR__ . '/config/config.neon');
 $configurator->addConfig(__DIR__ . '/config/config.dev.neon');
