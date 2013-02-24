@@ -11,8 +11,6 @@ parameters:
     port: 3306
     prefix: flame_
 
-  entities: [%appDir%/Models]
-
   imageStorage:
     thumbDir: '/media/images_thumbnails'
     imageDir: '/media/images'
@@ -33,6 +31,10 @@ parameters:
 php:
   date.timezone: Europe/Prague
   zlib.output_compression: yes
+
+doctrine:
+  proxyDirs: [%appDir%/Models]
+  connection: %database%
 
 nette:
   container:
