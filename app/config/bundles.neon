@@ -1,0 +1,5 @@
+modules:
+  linkBudle: [%appDir%/LinkBundle/config/config.neon]
+  appBundle:
+    - %appDir%/AppBundle/config/services.neon
+    - %appDir%/AppBundle/config/factories.neon
