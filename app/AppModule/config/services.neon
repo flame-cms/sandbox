@@ -9,7 +9,6 @@ services:
 	WordPressImporter: Flame\Addons\WordPress\PostsImporter
 	ThemeManager: Flame\CMS\Templating\ThemeManager(%theme%)
 	InFormFactory: Flame\CMS\FrontModule\Forms\Sign\InFormFactory
-	NavbarBuilderControlFactory: Flame\Components\NavbarBuilder\NavbarBuilderControlFactory
 	MappingStrategy: \Doctrine\ORM\Mapping\UnderscoreNamingStrategy
 	FileManager: \Flame\Tools\Files\FileManager(%imageStorage.baseDir%, %imageStorage.imageDir%)
 

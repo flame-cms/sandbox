@@ -18,3 +18,6 @@ factories:
 		create: \Flame\CMS\Components\Posts\PostControl(%posts%)
 		implement: \Flame\CMS\Components\Posts\IPostControlFactory
 		parameters: [array posts]
+
+	navbarBuilderControl:
+		implement: \Flame\Components\NavbarBuilder\INavbarBuilderControlFactory
