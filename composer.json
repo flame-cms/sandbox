@@ -9,6 +9,9 @@
 	},
 
 	"require": {
+		"flame/budle-installer": "@dev",
+		"flame/app-bundle": "@dev",
+		"flame/link-bundle": "@dev",
 		"flame/cms": "@dev",
 		"kdyby/bootstrap-form-renderer": "@dev",
 		"doctrine/orm": "2.3.0",
