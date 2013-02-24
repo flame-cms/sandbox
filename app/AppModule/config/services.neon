@@ -1,5 +1,5 @@
 services:
-	routerFactory: \Flame\CMS\Router\RouterFactory
+	routerFactory: \Flame\CMS\AppModule\Router\RouterFactory
 	router: @routerFactory::createRouter
 	Authorizator: Flame\CMS\Security\Authorizator
 	Authenticator: Flame\CMS\Security\Authenticator
