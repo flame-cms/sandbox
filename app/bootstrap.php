@@ -18,10 +18,13 @@ $configurator->createRobotLoader()
 	->addDirectory(__DIR__)
 	->addDirectory(__DIR__ . '/../libs/flame/cms')
 	->register();
-$configurator->addConfig(__DIR__ . '/config/config.neon');
-$configurator->addConfig(__DIR__ . '/config/config.dev.neon');
-$configurator->addConfig(__DIR__ . '/config/config.prod.neon');
 $configurator->addParameters(array('appDir' => __DIR__));
-$container = $configurator->createContainer();
 
+$configurator->addConfig(__DIR__ . '/AppModule/config/config.neon');
+$configurator->addConfig(__DIR__ . '/AppModule/config/services.neon');
+$configurator->addConfig(__DIR__ . '/AppModule/config/factories.neon');
+if(file_exists($configDev = __DIR__ . '/AppModule/config/config.dev.neon'))
+	$configurator->addConfig($configDev);
+
+$container = $configurator->createContainer();
 return $container;

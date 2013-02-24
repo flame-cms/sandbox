@@ -39,7 +39,7 @@ nette:
     debugger: false
 
   template:
-    helperLoaders: \Flame\Templating\Helpers
+    helperLoaders: [\Flame\Templating\Helpers]
     helpers:
       thumb: @ThumbnailsCreator::thumb
 
@@ -52,8 +52,3 @@ nette:
     autoStart: true
     expiration: 14 days
     name: FLAME
-
-
-includes:
-  - services.neon
-  - factories.neon
