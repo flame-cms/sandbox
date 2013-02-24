@@ -4,19 +4,19 @@
 	},
 
 	"require-dev": {
-		"dg/ftp-deployment": "@dev"
+		"dg/ftp-deployment": "@dev",
+		"symfony/console": "@dev"
 	},
 
 	"require": {
 		"flame/cms": "@dev",
-		"kdyby/bootstrap-form-renderer": "dev-master",
+		"kdyby/bootstrap-form-renderer": "@dev",
 		"doctrine/orm": "2.3.0",
-		"flame/framework": "dev-master",
-		"flame/navbarbuilder-component": "dev-master",
-		"flame/fileuploader-component": "dev-master",
-		"nette/nette": "dev-master",
-		"symfony/console": "2.0.*",
-		"flame/bootstrapdatepicker-control": "dev-master",
+		"flame/framework": "@dev",
+		"flame/navbarbuilder-component": "@dev",
+		"flame/fileuploader-component": "@dev",
+		"nette/nette": "@dev",
+		"flame/bootstrapdatepicker-control": "@dev",
 		"flame/lightboxgallery-component": "@dev"
 	}
 }
