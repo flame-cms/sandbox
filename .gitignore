@@ -1,3 +1,4 @@
 composer.lock
 www/media/*
 deployment.*
+app/*Bundle
