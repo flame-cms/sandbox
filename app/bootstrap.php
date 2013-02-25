@@ -13,7 +13,6 @@ require __DIR__ . '/../libs/autoload.php';
 $configurator = new \Flame\Config\Configurator();
 // $configurator->setDebugMode(TRUE);
 $configurator->registerDoctrineExtension();
-$configurator->registerBundlesExtension();
 $configurator->enableDebugger(__DIR__ . '/../log');
 $configurator->setTempDirectory(__DIR__ . '/../temp');
 $configurator->createRobotLoader()
@@ -22,8 +21,10 @@ $configurator->createRobotLoader()
 	->register();
 $configurator->addParameters(array('appDir' => __DIR__));
 
-$configurator->addConfig(__DIR__ . '/config/bundles.neon');
 $configurator->addConfig(__DIR__ . '/config/config.neon');
+$configurator->addConfig(__DIR__ . '/AppBundle/config/factories.neon');
+$configurator->addConfig(__DIR__ . '/AppBundle/config/services.neon');
+$configurator->addConfig(__DIR__ . '/LinkBundle/config/config.neon');
 if(file_exists($configDev = __DIR__ . '/config/config.dev.neon'))
 	$configurator->addConfig($configDev);
 
