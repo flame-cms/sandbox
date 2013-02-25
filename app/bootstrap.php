@@ -13,7 +13,7 @@ require __DIR__ . '/../libs/autoload.php';
 $configurator = new \Flame\Config\Configurator();
 // $configurator->setDebugMode(TRUE);
 $configurator->registerDoctrineExtension();
-$configurator->registerModulesExtension();
+$configurator->registerBundlesExtension();
 $configurator->enableDebugger(__DIR__ . '/../log');
 $configurator->setTempDirectory(__DIR__ . '/../temp');
 $configurator->createRobotLoader()

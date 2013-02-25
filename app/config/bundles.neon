@@ -1,4 +1,4 @@
-modules:
+bundles:
   linkBudle: [%appDir%/LinkBundle/config/config.neon]
   appBundle:
     - %appDir%/AppBundle/config/services.neon
