@@ -9,7 +9,6 @@ parameters:
     driver: pdo_mysql
     charset: utf8
     port: 3306
-    prefix: flame_
 
   imageStorage:
     thumbDir: '/media/images_thumbnails'
@@ -23,17 +22,21 @@ parameters:
     browserUrl: http://flame-cms.lc/
     # port: 4444
 
+  disabledPresenters: ['Admin', 'Dashboard', 'User']
+
   theme:
     baseDir: %wwwDir%
     baseFolder: themes
     default: default
+
+  entities: [%appDir%/Models]
 
 php:
   date.timezone: Europe/Prague
   zlib.output_compression: yes
 
 doctrine:
-  proxyDirs: [%appDir%/Models]
+  proxyDirs: %entities%
   connection: %database%
 
 nette:

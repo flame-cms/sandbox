@@ -12,12 +12,11 @@ require __DIR__ . '/../libs/autoload.php';
 
 $configurator = new \Flame\Config\Configurator();
 // $configurator->setDebugMode(TRUE);
-$configurator->registerDoctrineExtension();
+$configurator->registerExtension('doctrine', '\Flame\Doctrine\Config\Extension');
 $configurator->enableDebugger(__DIR__ . '/../log');
 $configurator->setTempDirectory(__DIR__ . '/../temp');
 $configurator->createRobotLoader()
 	->addDirectory(__DIR__)
-	->addDirectory(__DIR__ . '/../libs/flame/cms')
 	->register();
 $configurator->addParameters(array('appDir' => __DIR__));
 

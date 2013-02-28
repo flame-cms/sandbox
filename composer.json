@@ -9,17 +9,18 @@
 	},
 
 	"require": {
-		"flame/bundle-installer": "@dev",
 		"flame-cms/app-bundle": "@dev",
 		"flame-cms/link-bundle": "@dev",
-		"flame/cms": "@dev",
-		"kdyby/bootstrap-form-renderer": "@dev",
-		"doctrine/orm": "2.3.0",
+		"flame-cms/setting-bundle": "@dev",
+		"flame/bundle-installer": "@dev",
 		"flame/framework": "@dev",
+		"flame/doctrine": "@dev",
 		"flame/navbarbuilder-component": "@dev",
 		"flame/fileuploader-component": "@dev",
-		"nette/nette": "@dev",
 		"flame/bootstrapdatepicker-control": "@dev",
-		"flame/lightboxgallery-component": "@dev"
+		"flame/lightboxgallery-component": "@dev",
+		"nette/nette": "@dev",
+		"kdyby/bootstrap-form-renderer": "@dev",
+		"doctrine/orm": "2.3.0"
 	}
 }
