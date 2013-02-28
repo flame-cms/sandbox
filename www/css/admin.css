@@ -14,3 +14,7 @@ input, textarea {
 .tags-multiSelect{
     max-height: 200px;
 }
+
+.nav {
+    margin-bottom: 25px;
+}
