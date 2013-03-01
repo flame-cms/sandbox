@@ -13,13 +13,13 @@ namespace Flame\CMS\Templating;
 class ThemeManager extends \Flame\Templating\ThemeManager
 {
 
-	/** @var \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade */
+	/** @var \Flame\CMS\SettingBundle\Model\SettingFacade */
 	private $settingFacade;
 
 	/**
-	 * @param \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade $settingFacade
+	 * @param \Flame\CMS\SettingBundle\Model\SettingFacade $settingFacade
 	 */
-	public function injectSettingFacade(\Flame\CMS\SettingBundle\Entity\Settings\SettingFacade $settingFacade)
+	public function injectSettingFacade(\Flame\CMS\SettingBundle\Model\SettingFacade $settingFacade)
 	{
 		$this->settingFacade = $settingFacade;
 	}
