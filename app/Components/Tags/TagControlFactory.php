@@ -14,11 +14,6 @@ class TagControlFactory extends \Nette\Object
 {
 
 	/**
-	 * @var \Flame\CMS\Models\Options\OptionFacade $optionFacade
-	 */
-	private $optionFacade;
-
-	/**
 	 * @var \Flame\CMS\Models\Tags\TagFacade $tagFacade
 	 */
 	private $tagFacade;
@@ -28,20 +23,23 @@ class TagControlFactory extends \Nette\Object
 	 */
 	private $countOfItems = 10;
 
+	/** @var \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade */
+	private $settingFacade;
+
+	/**
+	 * @param \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade $settingFacade
+	 */
+	public function injectSettingFacade(\Flame\CMS\SettingBundle\Entity\Settings\SettingFacade $settingFacade)
+	{
+		$this->settingFacade = $settingFacade;
+	}
+
 	/**
 	 * @param \Flame\CMS\Models\Tags\TagFacade $tagFacade
 	 */
 	public function injectTagFacade(\Flame\CMS\Models\Tags\TagFacade $tagFacade)
 	{
 		$this->tagFacade = $tagFacade;
-	}
-
-	/**
-	 * @param \Flame\CMS\Models\Options\OptionFacade $optionFacade
-	 */
-	public function injectOptionFacade(\Flame\CMS\Models\Options\OptionFacade $optionFacade)
-	{
-		$this->optionFacade = $optionFacade;
 	}
 
 	/**
@@ -58,7 +56,7 @@ class TagControlFactory extends \Nette\Object
 
 	private function initCountOfItems()
 	{
-		$countOfItems = $this->optionFacade->getOptionValue('Menu:TagsCount');
+		$countOfItems = $this->settingFacade->getSettingValue('menu_tagsCount');
 		if((int) $countOfItems > 0) $this->countOfItems = (int) $countOfItems;
 	}
 

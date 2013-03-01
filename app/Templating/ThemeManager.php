@@ -13,17 +13,15 @@ namespace Flame\CMS\Templating;
 class ThemeManager extends \Flame\Templating\ThemeManager
 {
 
-	/**
-	 * @var \Flame\CMS\Models\Options\OptionFacade $optionFacade
-	 */
-	private $optionFacade;
+	/** @var \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade */
+	private $settingFacade;
 
 	/**
-	 * @param \Flame\CMS\Models\Options\OptionFacade $optionFacade
+	 * @param \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade $settingFacade
 	 */
-	public function injectOptionFacade(\Flame\CMS\Models\Options\OptionFacade $optionFacade)
+	public function injectSettingFacade(\Flame\CMS\SettingBundle\Entity\Settings\SettingFacade $settingFacade)
 	{
-		$this->optionFacade = $optionFacade;
+		$this->settingFacade = $settingFacade;
 	}
 
 	/**
@@ -33,7 +31,7 @@ class ThemeManager extends \Flame\Templating\ThemeManager
 	{
 		$theme = parent::getTheme();
 
-		if($option = $this->optionFacade->getOptionValue('Theme')){
+		if($option = $this->settingFacade->getSettingValue('theme')){
 			$path = $this->getDefaultThemeFolder() . DIRECTORY_SEPARATOR . $option;
 			if($this->existTheme($option))
 				$theme = $path;

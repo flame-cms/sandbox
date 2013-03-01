@@ -15,17 +15,15 @@ class PostControl extends \Flame\Application\UI\Control
 	 */
 	private $itemsPerPage = 10;
 
-	/**
-	 * @var \Flame\CMS\Models\Options\OptionFacade $optionFacade
-	 */
-	private $optionFacade;
+	/** @var \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade */
+	private $settingFacade;
 
 	/**
-	 * @param \Flame\CMS\Models\Options\OptionFacade $optionFacade
+	 * @param \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade $settingFacade
 	 */
-	public function injectOptionFacade(\Flame\CMS\Models\Options\OptionFacade $optionFacade)
+	public function injectSettingFacade(\Flame\CMS\SettingBundle\Entity\Settings\SettingFacade $settingFacade)
 	{
-		$this->optionFacade = $optionFacade;
+		$this->settingFacade = $settingFacade;
 	}
 
 	/**
@@ -52,7 +50,7 @@ class PostControl extends \Flame\Application\UI\Control
 
 	protected function beforeRender()
 	{
-		$postsLimit = (int) $this->optionFacade->getOptionValue('ItemsPerPage');
+		$postsLimit = (int) $this->settingFacade->getSettingValue('post_itemsPerPage');
 		if($postsLimit > 0) $this->itemsPerPage = $postsLimit;
 
 		$posts = $this->posts;

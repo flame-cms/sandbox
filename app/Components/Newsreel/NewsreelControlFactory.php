@@ -19,11 +19,6 @@ class NewsreelControlFactory extends \Nette\Object
 	private $itemsInNewsreelMenuList = 3;
 
 	/**
-	 * @var \Flame\CMS\Models\Options\OptionFacade $optionFacade
-	 */
-	private $optionFacade;
-
-	/**
 	 * @var \Flame\CMS\Models\Newsreel\NewsreelFacade $newsreelFacade
 	 */
 	private $newsreelFacade;
@@ -34,14 +29,6 @@ class NewsreelControlFactory extends \Nette\Object
 	public function injectNewsreelFacade(\Flame\CMS\Models\Newsreel\NewsreelFacade $newsreelFacade)
 	{
 		$this->newsreelFacade = $newsreelFacade;
-	}
-
-	/**
-	 * @param \Flame\CMS\Models\Options\OptionFacade $optionFacade
-	 */
-	public function injectOptionFacade(\Flame\CMS\Models\Options\OptionFacade $optionFacade)
-	{
-		$this->optionFacade = $optionFacade;
 	}
 
 	/**
