@@ -40,9 +40,7 @@
 	<div id="main" class="wrapper">
 
 		<div id="left">
-			{snippet flashMessages}
-				<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
-			{/snippet}
+			{control flasheMessages}
 
 			<div id="content">
 				{include #content}
