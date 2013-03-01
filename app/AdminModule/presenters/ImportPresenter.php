@@ -36,7 +36,7 @@ class ImportPresenter extends AdminPresenter
 		\Flame\CMS\Models\Posts\PostFacade $postFacade,
 		\Flame\CMS\Models\Users\UserFacade $userFacade,
 		\Flame\CMS\Models\Categories\CategoryFacade $categoryFacade,
-		\Flame\CMS\Models\Tags\TagFacade $tagFacade
+		\Flame\CMS\TagBundle\Model\TagFacade $tagFacade
 	)
 	{
 		$this->wordPressImporter = $wordPressImporter;
@@ -148,7 +148,7 @@ class ImportPresenter extends AdminPresenter
 	{
 		if($tag = $this->tagFacade->getOneByName($name)) return $tag;
 
-		$tag = new \Flame\CMS\Models\Tags\Tag($name, Strings::createSlug($name));
+		$tag = new \Flame\CMS\TagBundle\Model\Tag($name, Strings::createSlug($name));
 		$this->tagFacade->save($tag);
 		return $tag;
 	}

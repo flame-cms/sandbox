@@ -21,7 +21,7 @@ class PostFormFactory extends \Nette\Object
 	private $post;
 
 	/**
-	 * @var \Flame\CMS\Models\Tags\TagFacade
+	 * @var \Flame\CMS\TagBundle\Model\TagFacade
 	 */
 	private $tagFacade;
 
@@ -54,9 +54,9 @@ class PostFormFactory extends \Nette\Object
 	}
 
 	/**
-	 * @param \Flame\CMS\Models\Tags\TagFacade $tagFacade
+	 * @param \Flame\CMS\TagBundle\Model\TagFacade $tagFacade
 	 */
-	public function injectTagFacade(\Flame\CMS\Models\Tags\TagFacade $tagFacade)
+	public function injectTagFacade(\Flame\CMS\TagBundle\Model\TagFacade $tagFacade)
 	{
 		$this->tagFacade = $tagFacade;
 	}
@@ -208,13 +208,13 @@ class PostFormFactory extends \Nette\Object
 
 	/**
 	 * @param $name
-	 * @return \Flame\CMS\Models\Tags\Tag|object
+	 * @return \Flame\CMS\TagBundle\Model\Tag|object
 	 */
 	protected function createNewTag($name)
 	{
 		if($tagExist = $this->tagFacade->getOneByName($name)) return $tagExist;
 
-		$tag = new \Flame\CMS\Models\Tags\Tag($name, Strings::createSlug($name));
+		$tag = new \Flame\CMS\TagBundle\Model\Tag($name, Strings::createSlug($name));
 		$this->tagFacade->save($tag);
 		return $tag;
 	}

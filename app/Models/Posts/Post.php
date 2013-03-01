@@ -13,7 +13,7 @@ namespace Flame\CMS\Models\Posts;
 use DateTime,
     Flame\CMS\Models\Users\User,
 	Flame\CMS\Models\Categories\Category,
-	Flame\CMS\Models\Tags\Tag;
+	Flame\CMS\TagBundle\Model\Tag;
 
 /**
  * @Entity(repositoryClass="PostRepository")
@@ -59,7 +59,7 @@ class Post extends \Flame\Doctrine\Entity
 	protected $category;
 
 	/**
-	 * @ManyToMany(targetEntity="\Flame\CMS\Models\Tags\Tag", inversedBy="posts")
+	 * @ManyToMany(targetEntity="\Flame\CMS\TagBundle\Model\Tag", inversedBy="posts")
 	 * @JoinColumn(onDelete="SET NULL")
 	 */
 	protected $tags;
