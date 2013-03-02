@@ -12,6 +12,7 @@
 		"flame-cms/app-bundle": "@dev",
 		"flame-cms/link-bundle": "@dev",
 		"flame-cms/setting-bundle": "@dev",
+		"flame-cms/user-bundle": "@dev",
 		"flame/bundle-installer": "@dev",
 		"flame/framework": "@dev",
 		"flame/doctrine": "@dev",

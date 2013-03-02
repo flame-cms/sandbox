@@ -22,7 +22,8 @@ $configurator->addConfig(__DIR__ . '/AppBundle/config/config.neon');
 $configurator->addConfig(__DIR__ . '/LinkBundle/config/config.neon');
 $configurator->addConfig(__DIR__ . '/SettingBundle/config/config.neon');
 $configurator->addConfig(__DIR__ . '/TagBundle/config/config.neon');
-if(file_exists($configDev = __DIR__ . '/AppBundleconfig/config.dev.neon'))
+$configurator->addConfig(__DIR__ . '/UserBundle/config/config.neon');
+if(file_exists($configDev = __DIR__ . '/AppBundle/config/config.dev.neon'))
 	$configurator->addConfig($configDev);
 
 $container = $configurator->createContainer();
