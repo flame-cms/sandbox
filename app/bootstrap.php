@@ -15,18 +15,14 @@ $configurator = new \Flame\Config\Configurator();
 $configurator->registerExtension('doctrine', '\Flame\Doctrine\Config\Extension');
 $configurator->enableDebugger(__DIR__ . '/../log');
 $configurator->setTempDirectory(__DIR__ . '/../temp');
-$configurator->createRobotLoader()
-	->addDirectory(__DIR__)
-	->register();
+$configurator->createRobotLoader()->addDirectory(__DIR__)->register();
 $configurator->addParameters(array('appDir' => __DIR__));
 
-$configurator->addConfig(__DIR__ . '/config/config.neon');
-$configurator->addConfig(__DIR__ . '/AppBundle/config/factories.neon');
-$configurator->addConfig(__DIR__ . '/AppBundle/config/services.neon');
+$configurator->addConfig(__DIR__ . '/AppBundle/config/config.neon');
 $configurator->addConfig(__DIR__ . '/LinkBundle/config/config.neon');
 $configurator->addConfig(__DIR__ . '/SettingBundle/config/config.neon');
 $configurator->addConfig(__DIR__ . '/TagBundle/config/config.neon');
-if(file_exists($configDev = __DIR__ . '/config/config.dev.neon'))
+if(file_exists($configDev = __DIR__ . '/AppBundleconfig/config.dev.neon'))
 	$configurator->addConfig($configDev);
 
 $container = $configurator->createContainer();
