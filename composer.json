@@ -13,6 +13,7 @@
 		"flame-cms/link-bundle": "@dev",
 		"flame-cms/setting-bundle": "@dev",
 		"flame-cms/user-bundle": "@dev",
+		"flame-cms/post-bundle": "@dev",
 		"flame/bundle-installer": "@dev",
 		"flame/framework": "@dev",
 		"flame/doctrine": "@dev",
@@ -20,8 +21,9 @@
 		"flame/fileuploader-component": "@dev",
 		"flame/bootstrapdatepicker-control": "@dev",
 		"flame/lightboxgallery-component": "@dev",
-		"nette/nette": "@dev",
+		"nette/nette": "dev-master as 2.0.99",
 		"kdyby/bootstrap-form-renderer": "@dev",
-		"doctrine/orm": "2.3.0"
+		"doctrine/orm": "2.3.0",
+		"janmarek/webloader": "2.1.0"
 	}
 }
